@@ -1,0 +1,224 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #fff;
+    padding: 20px 0; /* Increased padding to move content away from the top */
+    position: sticky;
+}
+.nav-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Aligns the nav-container's children (the ul) to the center */
+    align-items: center;
+    position: relative; /* To position the button absolutely within this container */
+}
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.nav-links li {
+    margin: 0 10px; /* Adjust spacing between links as needed */
+}
+.nav-links a {
+    text-decoration: none;
+    color: #262028;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    color: #716d6d;
+}
+
+.button {
+    background-color: #262028;
+    font-size: 0.9em;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: absolute; /* Position the button absolutely */
+    right: 0; /* Align the button to the right */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Offset by half of its height */
+}
+.button:hover {
+    background-color: #333;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */ /* Adjust the height to control vertical positioning */
+    text-align: center; /* Centers text inside elements *//* Adjust this value as needed to position higher */
+    min-height: 100vh;
+}
+
+/* Styles for h1 */
+#home h1 {
+    font-size: 3em; /* Adjusted font size */ /* Add some space below the h1 */
+    width: 50%; /* Set width of h1 */
+}
+
+/* Styles for p */
+#home p {
+    margin-top: -20px;
+    width: 50%; /* Set width of p */
+    font-size: 1.25em; /* Adjusted font size */
+}
+
+#home button {
+    margin-top: 10px;
+    background-color: #262028;
+    font-size: 0.9em;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+#projects {
+    text-align: center;
+    min-height: 90vh;
+}
+
+#projectSlideshow {
+    background: #262028; /* Background color for the div */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Spacing inside the div */
+    box-sizing: border-box; /* Include padding and border in the width and height */
+    z-index: 1000; /* Make sure it's above other items */
+    margin: auto;
+    width: 75%;
+    height: vh;
+    padding: 10px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    min-height: 80vh;
+}
+
+.slide {
+    width: 100%;
+    height: 300px; /* Adjust the height as needed */
+    position: absolute;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #262028;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1001; 
+}
+
+.left-arrow {
+    left: 10px;
+    
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+
+.individualSlides {
+    display: none;
+}
+
+.content-container {
+    display: flex; /* Enable flexbox *//* Center the content vertically *//* Add some space between the slideshow and icons */
+}
+
+
+.individualSlidesPayroll {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.activePic {
+    display: block;
+    width: 100%;        /* Sets the width to 50% of the parent div */
+    margin-left: 40px;      /* Centers it within the parent div */
+    position: relative; /* To position the arrows with respect to this div */
+    /* Add any other styles you need, like padding or specific height */
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.activePic:hover {
+    box-shadow: 0 0 10px 5px #f2f3f3,
+    0 0 20px 7px #070707;
+}
+
+.icon {
+    /* You can set a specific width or max-width for the icons if you want to control their sizes */
+    width: 32px ;/* This assumes a gap of 10px; it subtracts the gap divided by two from 50% */
+    height: 40px; /* This keeps the aspect ratio of the images intact */
+    margin-top: 30px;
+}
+
+.icon-container {
+    display: flex; /* This will allow you to align the icons vertically or horizontally */
+    flex-direction: column; /* Stack icons vertically */
+    justify-content: center; /* Center the icons vertically, if that's what you need */
+    align-items: center; /* Center the icons horizontally */
+    flex-shrink: 0; /* Prevents the container from shrinking */
+    margin-left: 70px;
+    /* Your existing styles here */
+}
+
+.icon-with-progress {
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 100px; /* fixed width for the progress bar */
+    background-color: #ddd; /* Light grey background */
+    margin-left: 10px; /* Space between icon and progress bar */
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.progress {
+    background-color: #4caf50; /* Green color to indicate progress */
+    height: 100%;
+    border-radius: 5px;
+}
+
+.icon-percent {
+    margin-top: 40px;
+    margin-left: 10px;
+    color: white;
+}
+
