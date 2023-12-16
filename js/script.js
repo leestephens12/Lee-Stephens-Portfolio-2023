@@ -1,7 +1,11 @@
 const slides = document.getElementsByClassName("slide");
 const images = document.getElementsByClassName("individualSlides");
+const boxOfficeImages = document.getElementsByClassName("individualSlidesBoxoffice");
+const clickMe = document.getElementById("clickMe");
+const clickMeBoxoffice = document.getElementById("clickMeBoxoffice");
 var currentSlide = 0;
 var currentPic = 0;
+var currentPicBoxoffice = 0;
 
 function nextSlide(next) {
     console.log(slides);
@@ -30,6 +34,7 @@ function nextSlide(next) {
 }
 
 function nextPic() {
+    clickMe.style.display = "none";
     console.log(images.length);
     console.log(currentPic);
     currentPic += 1;
@@ -53,5 +58,34 @@ function nextPic() {
         images[currentPic-1].classList.remove("activePic");
         console.log(images[currentPic]);
         console.log(images[currentPic-1]);
+    }
+}
+
+
+function nextPicBoxoffice() {
+    clickMeBoxoffice.style.display = "none";
+    console.log(boxOfficeImages.length);
+    console.log(currentPicBoxoffice);
+    currentPicBoxoffice += 1;
+    if (currentPicBoxoffice > boxOfficeImages.length - 1) {
+        currentPicBoxoffice = 0;
+    }
+    console.log(currentPicBoxoffice);
+
+
+    if (currentPicBoxoffice == 0) {
+        console.log("in the zero loop " + currentPicBoxoffice);
+        boxOfficeImages[currentPicBoxoffice].classList.add("activePic");
+        boxOfficeImages[boxOfficeImages.length-1].classList.remove("activePic");
+
+        console.log(boxOfficeImages[currentPicBoxoffice]);
+        console.log(boxOfficeImages[boxOfficeImages.length-1]);
+    }
+    else {
+        console.log("in the other loop " + currentPicBoxoffice);
+        boxOfficeImages[currentPicBoxoffice].classList.add("activePic");
+        boxOfficeImages[currentPicBoxoffice-1].classList.remove("activePic");
+        console.log(boxOfficeImages[currentPicBoxoffice]);
+        console.log(boxOfficeImages[currentPicBoxoffice-1]);
     }
 }

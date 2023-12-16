@@ -148,7 +148,7 @@ header {
 }
 
 
-.individualSlides {
+.individualSlides, .individualSlidesBoxoffice {
     display: none;
 }
 
@@ -177,6 +177,33 @@ header {
 .activePic:hover {
     box-shadow: 0 0 10px 5px #f2f3f3,
     0 0 20px 7px #070707;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+.slide-text {
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    transform: translate(-50%, -50%); /* or any color you want */
+    font-size: 1.5em; /* or any size you want */
+    z-index: 10; /* make sure it's above the image */
+    color: white;
+    background-color: #070707;
+    border-radius: 25px;
+    width: 15%;
+    animation: bounce 2s infinite;
 }
 
 .icon {
@@ -222,3 +249,81 @@ header {
     color: white;
 }
 
+.project-title, .description {
+    color: white;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.individualSlidesBoxofficeContainer {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.individualSlidesBoxoffice {
+    width: 495px;
+    height: 310px;
+}
+
+
+
+.bubble {
+	height: 350px;
+	width: 50%;
+	min-width: 200px;
+	background: ivory;
+	display: block;
+	margin: 0 auto;
+	border-radius: 20px;
+	margin-top: 150px;
+}
+
+.bubble h1 {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.pointer {
+	height: 40px;
+	width: 40px;
+	background: ivory;
+	margin: 0 auto;
+	transform: rotate(45deg);
+	border-radius: 0 0 12px 0;
+	margin-top: -22px;
+	position: relative;
+	left: calc(0.5vw - 50px);
+}
+
+.blurred {
+	background: gray;
+	filter: blur(20px);
+	position: relative;
+	top: -315px;
+/* 	transform: scale(1.05); */
+	z-index: -1;
+}
+
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center; /* aligns the icon and text vertically */
+}
+
+.contact-item img {
+    margin-right: 10px; /* optional: adds space between the icon and the text */
+    height: 20px;
+    width: 20px;
+}
+
+.contact-item a {
+   text-decoration: none;
+   color: black;
+}
