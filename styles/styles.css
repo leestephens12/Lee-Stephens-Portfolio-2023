@@ -37,7 +37,7 @@ header {
 }
 
 .button {
-    background-color: #262028;
+    background-color: #445ef6;
     font-size: 0.9em;
     color: #fff;
     padding: 10px 20px;
@@ -79,7 +79,7 @@ header {
 
 #home button {
     margin-top: 10px;
-    background-color: #262028;
+    background-color: #445ef6;
     font-size: 0.9em;
     color: #fff;
     padding: 10px 20px;
@@ -92,11 +92,11 @@ header {
 
 #projects {
     text-align: center;
-    min-height: 90vh;
+    min-height: 100vh;
 }
 
 #projectSlideshow {
-    background: #262028; /* Background color for the div */
+    background: linear-gradient(to bottom, #b77afc 0%, #445ef6 100%); /* Background color for the div */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
     border-radius: 20px; /* Rounded corners */
     padding: 20px; /* Spacing inside the div */
@@ -138,6 +138,8 @@ header {
     z-index: 1001; 
 }
 
+
+
 .left-arrow {
     left: 10px;
     
@@ -166,12 +168,12 @@ header {
 
 .activePic {
     display: block;
-    width: 100%;        /* Sets the width to 50% of the parent div */
-    margin-left: 40px;      /* Centers it within the parent div */
+    width: 100%;        /* Sets the width to 50% of the parent div */      /* Centers it within the parent div */
     position: relative; /* To position the arrows with respect to this div */
     /* Add any other styles you need, like padding or specific height */
+    margin-left: -65px;
     border-radius: 20px;
-    margin-top: 40px;
+    margin-top: 100px;
 }
 
 .activePic:hover {
@@ -255,6 +257,10 @@ header {
     margin-left: 50px;
 }
 
+.description {
+    width: 90%;
+}
+
 .individualSlidesBoxofficeContainer {
     width: 50%;
     margin: 0;
@@ -266,64 +272,180 @@ header {
     height: 310px;
 }
 
-
-
-.bubble {
-	height: 350px;
-	width: 50%;
-	min-width: 200px;
-	background: ivory;
-	display: block;
-	margin: 0 auto;
-	border-radius: 20px;
-	margin-top: 150px;
+#contact {
+    min-height: 100vh;
+}
+.message-icon {
+    height: 350px;
+    width: 350px;
+    padding: 150px;
 }
 
-.bubble h1 {
-    margin-left: 10px;
-    margin-top: 10px;
-    font-size: 25px;
-}
-
-.pointer {
-	height: 40px;
-	width: 40px;
-	background: ivory;
-	margin: 0 auto;
-	transform: rotate(45deg);
-	border-radius: 0 0 12px 0;
-	margin-top: -22px;
-	position: relative;
-	left: calc(0.5vw - 50px);
-}
-
-.blurred {
-	background: gray;
-	filter: blur(20px);
-	position: relative;
-	top: -315px;
-/* 	transform: scale(1.05); */
-	z-index: -1;
-}
-
-.contact-icons {
+.contact-area {
     display: flex;
-    flex-direction: column;
-    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
-.contact-item {
+.message-div {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+.contact-form {
+    flex: 1;
+    margin-right: 50px;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    font-size: 15px;
+    border: 1px solid lightgrey;
+}
+
+.contact-form form input {
+    height: 40px;
+    border-radius: 15px;
+}
+
+input, textarea{
+    text-indent: 10px;
+}
+
+.contact-form form textarea {
+    height: 70px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-area {
+        flex-direction: column;
+    }
+
+    .message-div, .contact-form {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+#contact {
+    position: relative;
+    background-color: #fff; /* Top color */
+    overflow: hidden;
+}
+
+.wave-container {
+    position: absolute;
+    top: 50%; /* Position at the middle */
+    transform: translateY(-50%); /* Center it vertically */
+    width: 100%;
+    height: 100vh; /* Height of the wave */
+    z-index: 0;
+}
+
+.content-container {
+    position: relative;
     display: flex;
-    align-items: center; /* aligns the icon and text vertically */
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
 
-.contact-item img {
-    margin-right: 10px; /* optional: adds space between the icon and the text */
-    height: 20px;
-    width: 20px;
+.contact-image {
+    /* Your styling for the image */
+    z-index: 1;
+    /*position: relative;*/
 }
 
-.contact-item a {
-   text-decoration: none;
-   color: black;
+.message-icon {
+    z-index: 2;
+}
+
+.contact-form {
+    /* Your styling for the form */
+    z-index: 1;
+    position: relative;
+    background-color: #fff; /* Match top background color */
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-left: 2em; /* Space between image and form */
+}
+
+/* Make sure the form and the image are above the wave */
+.contact-form, .contact-image {
+    position: relative;
+}
+
+/* If you want to make sure that the form and image are centered vertically in the visible part above the wave */
+@media screen and (min-height: 600px) {
+    .content-container {
+        margin-top: -75px; /* Half of the wave height to center the content */
+    }
+}
+
+.contact-form button{
+    /* Your styling for the form */
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    background-size: 200% 200%;
+    background-image: linear-gradient(to right, #b77afc 0%, #0328f7 100%);
+    
+    animation: GradientMove 3s ease infinite alternate;
+}
+
+.contact-form button:hover{
+    background-color: #333;
+    cursor: pointer;
+}
+  
+@keyframes GradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+#aboutMe {
+    min-height: 100vh;
+}
+
+.pin-icon {
+    height: 60px;
+    width: 60px;
+}
+
+.firstPin {
+    margin-left: 140px;
+    margin-top: 60px;
+}
+
+.about-h1 {
+    display: inline;
+    font-size: 1.75em;
+}
+
+.first-pin-under {
+    margin-left: 100px;
+}
+
+.pin-icon-map {
+    height: 25px;
+    width: 25px;
+}
+
+.map-about {
+    display: inline;
+    font-size: 1.05em;
 }

@@ -10,7 +10,7 @@
         <header>
             <div class="nav-container">
                 <ul class="nav-links">
-                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#aboutMe">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#history">History</a></li>
                 </ul>
@@ -24,7 +24,32 @@
                 <p>Canadian based developer, currently accumulated 8 months of experience split between a Software Engineering and DevOps Internship</p>
                 <button onclick="location.href='#projects'">View Projects</button>
             </section>
-            <section id="aboutMe"></section>
+            <section id="aboutMe">
+                <div class="firstPin">
+                    <img class="pin-icon" src="images/pin.png">
+                    <h1 class="about-h1">June 2019: Graduated Saint-Mary's High School</h1>
+                    <div class="first-pin-under">
+                        <img class="pin-icon-map" src="images/map.png">
+                        <h1 class="map-about">Owen Sound, Ontario</h1>
+                    </div>
+                </div>
+                <div class="firstPin">
+                    <img class="pin-icon" src="images/pin.png">
+                    <h1 class="about-h1">September 2020: Began Honours Bachelor in Science at Lakehead University</h1>
+                    <div class="first-pin-under">
+                        <img class="pin-icon-map" src="images/map.png">
+                        <h1 class="map-about">Orillia, Ontario</h1>
+                    </div>
+                </div>
+                <div class="firstPin">
+                    <img class="pin-icon" src="images/pin.png">
+                    <h1 class="about-h1">September 2020: Began Computer Programming Diploma at Georgian College</h1>
+                    <div class="first-pin-under">
+                        <img class="pin-icon-map" src="images/map.png">
+                        <h1 class="map-about">Barrie, Ontario</h1>
+                    </div>
+                </div>
+            </section>
             <section id="projects">
                 <div id="projectSlideshow">
                 <!-- Slideshow container -->
@@ -105,34 +130,27 @@
                 
             </section>
             <section id="contact">
-                <div>
-                    <div class="bubble">
-                        <h1>Contact Me</h1>
-                        <div class="contact-icons">
-                            <div class="contact-item" id="phonei">
-                                <img src="images/phone.png">
-                                <p class="phone">+1 (519)-377-6912</p>
-                            </div>
-                            <div class="contact-item">
-                                <img src="images/linkden.png">
-                                <a href="https://www.linkedin.com/in/leestephens-dev/">https://www.linkedin.com/in/leestephens-dev/</a>
-                            </div>
-                            <div class="contact-item">
-                                <img src="images/mail.png">
-                                <p>leestephens12@icloud.com</p>
-                            </div>
-                            <div class="contact-item">
-                                <img src="images/github.png">
-                                <a href="https://github.com/leestephens12">https://github.com/leestephens12</a>
-                            </div>
-                        </div>
+                <div class="contact-area">
+                    <div class="wave-container">
+                        <!-- SVG for the wave with two colors -->
+                        <svg viewBox="0 0 1200 150" preserveAspectRatio="none" style="width: 100%; height: 100vh;">
+                            <path d="M0,75 C250,125 950,25 1200,75 L1200,150 L0,150 Z" fill="rgba(111, 171, 248, 0.5)"></path>
+                        </svg>
                     </div>
-                    <div class="pointer"></div>
-                </div>
-                
-                <div>
-                    <div class="bubble blurred"></div>
-                    <div class="pointer blurred"></div>
+                    <div class="message-div">
+                        <img class="message-icon" src="images/message-icon.png">
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <h1>Contact Me</h1>
+                            <input type="text" id="firstName" name="firstName" placeholder="First Name"><br>
+                            <input type="text" id="lastName" name="lastName" placeholder="Last Name"><br>
+                            <input type="email" id="email" name="email" placeholder="Email"><br>
+                            <textarea id="message" name="message" placeholder="Message"></textarea><br>
+                            
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
                 </div>
                 
             </section>
