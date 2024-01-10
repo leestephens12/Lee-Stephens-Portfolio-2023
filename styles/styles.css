@@ -421,31 +421,76 @@ input, textarea{
     min-height: 100vh;
 }
 
-.pin-icon {
-    height: 60px;
-    width: 60px;
+.card {
+    min-height: 5vh;
+    width: 80%;
+    border: 1px solid #445ef6;
+    box-shadow: 3px 3px 5px 5px #449df6;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.firstPin {
-    margin-left: 140px;
-    margin-top: 60px;
+.card h1 {
+    margin-left: 10px;
+    font-size: 1.1em;
 }
 
-.about-h1 {
+.about-info {
+    display: none;
+}
+
+.pin {
+    height: 30px;
+    width: 30px;
+}
+
+.pin-div {
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.edu-about {
     display: inline;
-    font-size: 1.75em;
 }
 
-.first-pin-under {
-    margin-left: 100px;
-}
-
-.pin-icon-map {
+.map {
     height: 25px;
     width: 25px;
 }
 
-.map-about {
+.map-div p {
     display: inline;
-    font-size: 1.05em;
+    margin-left: 5px;
+}
+
+.role-img {
+    width: 30px;
+    height: 30px;
+}
+
+.work-about {
+    display: inline;
+    font-size: 1.1em;
+}
+
+.role {
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.card:hover {
+    background-color: rgb(238, 236, 236);
+    cursor: pointer;
+}
+
+.percentage {
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.col1 {
+    margin-left: 30px;
 }

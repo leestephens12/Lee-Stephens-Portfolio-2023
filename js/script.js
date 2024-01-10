@@ -3,6 +3,7 @@ const images = document.getElementsByClassName("individualSlides");
 const boxOfficeImages = document.getElementsByClassName("individualSlidesBoxoffice");
 const clickMe = document.getElementById("clickMe");
 const clickMeBoxoffice = document.getElementById("clickMeBoxoffice");
+const cards = document.getElementsByClassName("about-info");
 var currentSlide = 0;
 var currentPic = 0;
 var currentPicBoxoffice = 0;
@@ -87,5 +88,34 @@ function nextPicBoxoffice() {
         boxOfficeImages[currentPicBoxoffice-1].classList.remove("activePic");
         console.log(boxOfficeImages[currentPicBoxoffice]);
         console.log(boxOfficeImages[currentPicBoxoffice-1]);
+    }
+}
+
+function cardsOnclick(type) {
+    console.log(type);
+    console.log(cards[0]);
+    if (type == 'education') {
+        cards[0].style.display = "block";
+        cards[1].style.display = "none";
+        cards[2].style.display = "none";
+        cards[3].style.display = "none";
+    }
+    else if (type == 'work') {
+        cards[1].style.display = "block";
+        cards[0].style.display = "none";
+        cards[2].style.display = "none";
+        cards[3].style.display = "none";
+    }
+    else if (type == 'languages') {
+        cards[2].style.display = "block";
+        cards[1].style.display = "none";
+        cards[0].style.display = "none";
+        cards[3].style.display = "none";
+    }
+    else if (type == 'databases') {
+        cards[3].style.display = "block";
+        cards[1].style.display = "none";
+        cards[2].style.display = "none";
+        cards[0].style.display = "none";
     }
 }
