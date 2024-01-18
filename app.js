@@ -10,6 +10,7 @@ const indexRouter = require('./routes/index'); // Assumes you have an index rout
 // Serve static files (like CSS, JavaScript, images)
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: true })); // To parse URL-encoded data
 app.set('view engine', 'ejs');
 
 // Use routers
